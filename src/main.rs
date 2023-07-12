@@ -28,7 +28,6 @@ fn main() {
         for element in input {
             let mut rng = rand::thread_rng();
             let temp: Vec<&str> = element.split("d").collect();
-            //(0..input[i].parse().unwrap()).map(|_| println!("hi"));
             let rolls: Vec<i32> = (0..temp[0].parse().unwrap())
                 .map(|_: i32| -> i32 { rng.gen_range(1..temp[1].parse().unwrap()) })
                 .collect();
